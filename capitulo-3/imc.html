@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase) {
+		document.write(frase + "<br>");
+	}
+	
+	function calculaIMC(altura, peso) {
+		var imc = peso / (altura * altura);
+		return Math.round(imc);
+	}
+
+	var nome = prompt("Bom dia! Qual é o seu nome?");
+	var altura = prompt(nome + ", qual é a sua altura?");;
+	var peso = prompt("E o seu peso, " + nome + "?");;	
+	var imc = calculaIMC(altura, peso);
+	mostra("IMC: " + imc);
+	mostra("Você ainda está " + (imc - 18.5) + " pontos acima do limite da magreza.");
+	mostra("Você ainda está " + (35 - imc) + " pontos abaixo do limite da obesidade severa.");
+</script>
